@@ -1,3 +1,3 @@
 # Game_for_Course
 
-## Created By WataRiN77.
+### Created By ZhaJunhui, Student ID 2021512010.
