@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     Quaternion  m_Rotation = Quaternion.identity;
     AudioSource m_AudioSource;
 
+    //public GameObject GetPlayer(){return playerJL;}
+
     void Start ()
     {
         m_Animator    = GetComponent<Animator>   ();
@@ -50,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnAnimatorMove ()
     {
-        m_Rigidbody.MovePosition (m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude);
+        m_Rigidbody.MovePosition (m_Rigidbody.position + 3 * m_Movement * m_Animator.deltaPosition.magnitude);
         m_Rigidbody.MoveRotation (m_Rotation);
     }
 }

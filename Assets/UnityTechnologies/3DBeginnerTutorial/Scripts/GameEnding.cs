@@ -32,8 +32,9 @@ public class GameEnding : MonoBehaviour
     {
         if (m_IsPlayerAtExit)
         {
-            SceneManager.LoadScene("Scene2");
-            SceneManager.UnloadSceneAsync("SampleScene");       
+            SceneManager.LoadScene (1, LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync(0);  
+            //SceneManager.UnloadSceneAsync(0);      
             //DontDestroyOnLoad(player);     
         }
         else if (m_IsPlayerCaught)
@@ -51,7 +52,7 @@ public class GameEnding : MonoBehaviour
         {
             if (doRestart)
             {
-                SceneManager.LoadScene (0);
+                SceneManager.LoadScene (0, LoadSceneMode.Additive);
                 SceneManager.UnloadSceneAsync("Scene2"); 
 
             }

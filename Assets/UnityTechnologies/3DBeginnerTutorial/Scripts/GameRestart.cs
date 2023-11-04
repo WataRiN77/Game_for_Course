@@ -36,8 +36,8 @@ public class GameReset : MonoBehaviour
 
             if(m_timer > fadeDuration)
             {
-                SceneManager.LoadScene (0);
-                SceneManager.UnloadSceneAsync("Scene2");
+                SceneManager.LoadScene (0, LoadSceneMode.Additive);
+                SceneManager.UnloadSceneAsync(1);
                 //Debug.Log(m_IsPlayerAtDoor);
             }            
             
