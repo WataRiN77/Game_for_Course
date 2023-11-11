@@ -12,6 +12,7 @@ public class SwitchCounter : MonoBehaviour
     void Start()
     {
         SwitchCounts = 0;
+        Debug.Log(SwitchCounts);
         LastScene = 1;        
     }
 
@@ -41,10 +42,13 @@ public class SwitchCounter : MonoBehaviour
             currentScene = 1;
         }
 
-        if(currentScene != LastScene) SwitchCounts += 1;
+        if(currentScene != LastScene)
+        {
+            SwitchCounts += 1;
+            Debug.Log(SwitchCounts);
+        }      
 
         LastScene = currentScene;
 
-        Debug.Log(SwitchCounts);
     }
 }
